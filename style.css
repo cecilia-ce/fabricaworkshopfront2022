@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+
+/* 
+as páginas já vêm com uma estilização pré-configurada. Então é interessante resetar esses valores pré-estabelecidos
+para que não interfiram em como vamos estilizar a nossa página e fique dando bugs desnecessários
+
+O *(asterisco) seleciona todas as tags do nosso documento html. Por isso utilizamos ele para fazer o reset das configurações.
+
+*/
+:root {
+    --cor-botao: #FFB800;
+    --cor-botao-foco: #FF900E;
+}
+
+
+* {
+    margin: 0; /*distância da tag selecionada para o exterior*/
+    padding: 0;/* distância da tag selecionada para o conteúdo dela*/
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'roboto', sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 25px;
+    
+}
+
+.cabecalho-logo {
+    height: 60px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 40px;   
+}
+
+.menu-item {
+    color: black;
+    font-weight: 400; /* para ajeitar o peso da fonte - quanto maior, mais negrito - nesse caso não faz diferença pois ele entra como regular*/   
+}  
+
+.area-principal {
+    border-top: 1px solid;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.conteudo-principal {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 40px;
+}
+
+.titulo {
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.texto {
+    font-family: 'roboto', sans-serif;
+    font-size: 20px;
+}
+.botao {
+    height: 100px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: var(--cor-botao);
+    color: #fff;
+    font-family: 'roboto bold', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao:hover {
+    background-color: var(--cor-botao-foco);
+}
+
+.rodape {
+    padding: 45px;
+    border-top: 1px solid;
+    
+}
+
+.rodape-texto {
+    text-align: center;
+}
